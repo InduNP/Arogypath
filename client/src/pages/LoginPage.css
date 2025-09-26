@@ -1,0 +1,109 @@
+.login-page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .login-form-card {
+    width: 100%;
+    max-width: 400px;
+    
+    /* --- 1. THE "GLASSMORPHISM" EFFECT --- */
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white for the glass */
+    backdrop-filter: blur(12px); /* The essential blur effect */
+    -webkit-backdrop-filter: blur(12px); /* For Safari */
+    border: 1px solid rgba(255, 255, 255, 0.7); /* A subtle white "light-catching" edge */
+    
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(91, 80, 71, 0.2); /* A soft, earthy shadow */
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form-card h2 {
+    text-align: center;
+    margin: 0 0 2rem 0; /* More space below the title */
+    font-size: 2rem;
+    color: #3D2B1F; /* Dark, earthy brown */
+    font-weight: 600;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 500;
+    color: #5a4b40; /* Lighter brown */
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  
+  /* --- 2. MINIMALIST INPUTS LIKE THE REGISTER PAGE --- */
+  .form-group input {
+    width: 100%;
+    padding: 10px 2px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background: transparent; /* Makes the input part of the glass */
+    border: none; /* Removes the default box */
+    border-bottom: 1.5px solid rgba(61, 43, 31, 0.4); /* A subtle brown underline */
+    color: #3D2B1F; /* Dark text for typing */
+    transition: border-color 0.3s ease;
+    border-radius: 0;
+  }
+  
+  .form-group input::placeholder {
+    color: rgba(90, 75, 64, 0.5); /* Faded brown placeholder */
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-bottom-color: #556B2F; /* Solid green underline on focus */
+  }
+  
+  /* --- 3. THEMED BUTTON --- */
+  .login-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #556B2F;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem; /* Space above the button */
+    transition: all 0.2s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #6B8E23;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(85, 107, 47, 0.2);
+  }
+  
+  .register-link {
+    text-align: center;
+    margin-top: 2rem; /* More space above the link */
+    color: #5a4b40;
+    font-size: 0.95rem;
+  }
+  
+  .register-link a {
+    color: #556B2F;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }

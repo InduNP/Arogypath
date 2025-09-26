@@ -1,0 +1,249 @@
+/* client/src/pages/DietPlannerPage.css */
+
+.diet-planner-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2.5rem; 
+  background-color: #ffffff;
+  border-radius: 16px; /* More rounded */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* Deeper, softer shadow */
+}
+
+.diet-planner-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem; 
+  color: #465a26; 
+  font-size: 2rem; /* Slightly larger title */
+  font-weight: 700;
+}
+.intro-text {
+  text-align: center;
+  color: #555; /* Darkened for better contrast */
+  margin-bottom: 3rem; 
+  font-size: 1.1rem;
+}
+
+.questionnaire-form .question-block {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #e0e0e0; 
+}
+
+.questionnaire-form label {
+  display: block;
+  font-weight: 700; /* Bolder */
+  margin-bottom: 0.75rem;
+  color: #222; /* Darkened for better readability */
+  font-size: 1.1rem;
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px; 
+}
+
+.option-button {
+  padding: 10px 20px;
+  font-size: 1rem; /* Slightly larger text */
+  background-color: #f7f7f7; 
+  border: 1px solid #d0d0d0;
+  border-radius: 25px; 
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: #444; /* Darkened text */
+  /* Ensures the button text is contained */
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.option-button:hover {
+  background-color: #e6e6e6;
+  border-color: #b0b0b0;
+}
+
+/* --- THEME COLOR CHANGE --- */
+.option-button.selected {
+  background-color: #556B2F; 
+  color: white;
+  border-color: #556B2F;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(85, 107, 47, 0.4); /* Stronger shadow on selected */
+}
+.option-button.selected:hover {
+    background-color: #465a26; 
+    border-color: #465a26;
+}
+/* --- END THEME COLOR CHANGE --- */
+
+.question-block-inline {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.inline-field input {
+  width: 120px; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.inline-field input:focus,
+textarea:focus {
+    border-color: #556B2F; /* Theme color on focus */
+    box-shadow: 0 0 0 1px #556B2F;
+    outline: none;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px; /* Made taller for more input space */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+.generate-section {
+  text-align: center;
+  margin-top: 3rem; 
+}
+
+/* --- THEME BUTTON CHANGE (Applies to the form's Generate button) --- */
+.generate-button {
+  padding: 14px 40px; 
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #556B2F; 
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(85, 107, 47, 0.5); /* Enhanced button shadow */
+  transition: all 0.2s ease;
+}
+
+.generate-button:hover {
+    background-color: #465a26; 
+    transform: translateY(-2px); /* Subtle lift on hover */
+    box-shadow: 0 8px 20px rgba(85, 107, 47, 0.6);
+}
+/* --- END THEME BUTTON CHANGE --- */
+
+.generate-button:disabled {
+  background-color: #cccccc;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: translateY(0);
+}
+
+/* Error styles */
+.error-message {
+  color: #a00; 
+  background-color: #fff0f0; 
+  border: 1px solid #f0d0d0;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 1.5rem 0;
+  font-weight: 500;
+}
+.diet-plan-result {
+  margin-top: 2rem;
+  padding: 2rem; 
+  background-color: #f0f8ff; /* Light blue/gray background for result box */
+  border: 1px solid #e3e3e3;
+  border-radius: 12px;
+}
+.plan-text {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.7; /* Increased line height for readability */
+  color: #333;
+  font-size: 0.95rem;
+}
+
+
+/* --- STYLES FOR RESULT ACTION BUTTONS --- */
+
+.result-actions {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 15px; /* Spacing between buttons */
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #e0e0e0;
+    align-items: center;
+}
+
+.action-button {
+    /* Base styles for all action buttons */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    border: 2px solid transparent;
+}
+
+/* 3. Primary Button: Generate a New Plan */
+.primary-action-button {
+    background-color: #556B2F;
+    color: white;
+    border-color: #556B2F;
+    order: 3; 
+    box-shadow: 0 4px 10px rgba(85, 107, 47, 0.4);
+}
+
+.primary-action-button:hover {
+    background-color: #465a26;
+    border-color: #465a26;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(85, 107, 47, 0.5);
+}
+
+/* 1. Secondary Button: Download as PDF */
+.secondary-action-button {
+    background-color: white;
+    color: #465a26;
+    border-color: #465a26;
+    order: 1;
+}
+
+.secondary-action-button i {
+    margin-right: 8px;
+}
+
+.secondary-action-button:hover {
+    background-color: #f0f0f0;
+    color: #335522;
+    border-color: #335522;
+}
+
+/* 2. Tertiary Button: Consult an Expert */
+.tertiary-action-button {
+    background-color: transparent;
+    color: #465a26;
+    border: none; 
+    text-decoration: underline;
+    padding: 10px 5px;
+    font-weight: 500;
+    order: 2;
+    line-height: 1.5;
+}
+
+.tertiary-action-button:hover {
+    color: #335522;
+    background-color: transparent;
+    text-decoration: none;
+}

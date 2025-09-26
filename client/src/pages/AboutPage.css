@@ -1,0 +1,138 @@
+/* src/pages/AboutPage.css */
+
+.about-page-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* --- General Text and Headers --- */
+.about-headline {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3D2B1F; /* Dark brown/black */
+    margin-bottom: 5px;
+}
+
+.headline-underline {
+    border: none;
+    height: 3px;
+    width: 100px;
+    background-color: #556B2F; /* Theme Green */
+    margin: 0 0 30px 0;
+}
+
+.about-section {
+    padding: 30px 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.about-section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.mission-hero {
+    padding-top: 0;
+}
+
+.mission-statement {
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #4a4a4a;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #465a26;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.center-text {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* --- Section 2: Vision & Tech (Two-Column) --- */
+.vision-tech-section {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.vision-text-block {
+    flex: 1;
+}
+
+.vision-image-block {
+    flex-shrink: 0;
+    width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Section 3: Principles Grid --- */
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.principle-box {
+    padding: 20px;
+    background-color: #f7fcf7;
+    border: 1px solid #d4e3d4;
+    border-left: 5px solid #556B2F; /* Accent border */
+    border-radius: 8px;
+}
+
+.principle-box h3 {
+    color: #556B2F;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.principle-box p {
+    font-size: 0.9rem;
+}
+
+
+/* --- Section 4: Call to Action (CTA) --- */
+.cta-section {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #556B2F;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(85, 107, 47, 0.4);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #465a26;
+    transform: translateY(-2px);
+}

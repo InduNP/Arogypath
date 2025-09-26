@@ -1,0 +1,94 @@
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    /* --- The Core Layout: Pushes logo and nav to opposite ends --- */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    box-sizing: border-box;
+    padding: 0 2.5rem; /* Increased padding for a more spacious feel */
+    height: 80px; /* Slightly taller for a more premium header */
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* --- 1. The Logo Styling (INCREASED SIZE HERE) --- */
+  .header-logo {
+    display: flex;
+    align-items: center;
+  }
+  .header-logo img {
+    /* *** MODIFIED: Increased logo height from 35px to 50px *** */
+    height: 110px; 
+    width: auto; /* Maintains aspect ratio */
+  }
+  
+  /* --- 2. The Right-Aligned Navigation --- */
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Increased gap for more spacing */
+  }
+  
+  .header-nav a {
+    text-decoration: none;
+    color: #556B2F;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+  
+  .header-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #556B2F;
+    transition: width 0.3s ease;
+  }
+  
+  .header-nav a:hover::after {
+    width: 100%;
+  }
+  
+  /* --- 3. Consistent Button Styling --- */
+  .login-button,
+  .logout-button {
+    display: inline-block;
+    
+    /* *** MODIFIED: Changed default login button to be solid green (matching the first image's logout button) *** */
+    background-color: #556B2F; /* Solid Green */
+    border: 2px solid #556B2F;
+    color: white; /* White text for contrast */
+    
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    margin-left: 1rem; /* Adds space to separate from links */
+  }
+  
+  .login-button:hover,
+  .logout-button:hover {
+    /* For a nice subtle hover effect, darken the background slightly */
+    background-color: #465a26; /* Darker shade of green */
+    color: white;
+  }
+  
+  /* This removes the underline hover effect from the login link-button */
+  .header-nav a.login-button::after {
+    display: none;
+  }

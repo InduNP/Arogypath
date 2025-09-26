@@ -1,0 +1,97 @@
+/* client/src/pages/DashboardPage.css (SIMPLIFIED & AESTHETIC) */
+
+/* --- Overall Page Container --- */
+.dashboard-page-container {
+    max-width: 1000px; 
+    margin: 120px auto 40px auto;
+    padding: 0 20px;
+}
+/* IMPORTANT: The background image styles are now in DashboardPage.tsx for dynamic use */
+
+
+/* --- Welcome Banner --- */
+.dashboard-welcome-banner {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.dashboard-welcome-banner h1 {
+    font-size: 2.8rem;
+    color: #465a26; 
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.dashboard-welcome-banner p {
+    font-size: 1.15rem;
+    color: #6a6a6a; 
+    font-style: italic;
+}
+
+
+/* --- Main Scrollable Tips Card --- */
+.dashboard-card.main-tips-card {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white for a nice effect over background */
+    border-radius: 16px;
+    padding: 40px; /* More padding */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+    max-height: 80vh; /* Set a max height for the card itself */
+    overflow-y: auto; /* MAKE IT SCROLLABLE */
+    position: relative;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    color: #556B2F;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.tip-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f7f7f7; /* Light background for each tip */
+    border-radius: 10px;
+    border-left: 5px solid #556B2F; /* Theme color highlight */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.tip-title {
+    font-size: 1.3rem;
+    color: #465a26;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.tip-text {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Call to Action Section --- */
+.bottom-cta-section {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 30px;
+}
+
+/* --- Re-used Button Styles (Ensure these are defined elsewhere or copy from previous steps) --- */
+.btn {
+    text-decoration: none;
+    padding: 14px 40px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-primary-green {
+    background-color: #556B2F; 
+    color: white;
+}
+.btn-primary-green:hover {
+    background-color: #465a26;
+    transform: translateY(-2px);
+}

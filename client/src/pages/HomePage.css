@@ -1,0 +1,116 @@
+.homepage-hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+    background: radial-gradient(circle, #ffffff 0%, #F5F5DC 100%);
+  }
+  
+  .hero-content {
+    max-width: 700px; /* Slightly narrower for better text flow */
+  }
+  
+  /* --- 1. Logo Adjustments --- */
+  .hero-logo {
+    width: 120px; /* Reduced size for elegance */
+    height: auto;
+    margin-bottom: 1.5rem; /* Reduced space below the logo */
+  }
+  
+  /* --- 2. Headline and Text Refinements --- */
+  .hero-headline {
+    font-size: 3.2rem; /* Slightly smaller to balance with the logo */
+    font-weight: 600;
+    color: #3D2B1F;
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 1.5rem; /* Consistent spacing */
+    line-height: 1.3;
+  }
+  
+  .hero-subheadline {
+    font-size: 1.2rem;
+    color: #5a4b40;
+    /* Increased space to give the buttons breathing room */
+    margin-bottom: 3rem; 
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6; /* Improved readability */
+  }
+  
+  /* --- 3. Button Enhancements --- */
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .hero-button {
+    text-decoration: none;
+    padding: 14px 28px; /* Slightly larger for better presence */
+    border-radius: 8px;
+    font-size: 1rem; /* Adjusted font size */
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid #556B2F; /* Give both buttons a consistent border */
+    cursor: pointer;
+  }
+  
+  .hero-button.primary {
+    background-color: #556B2F;
+    color: white;
+  }
+  .hero-button.primary:hover {
+    background-color: #6B8E23;
+    border-color: #6B8E23;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(85, 107, 47, 0.3);
+  }
+  
+  .hero-button.secondary {
+    background-color: transparent;
+    color: #556B2F;
+  }
+  .hero-button.secondary:hover {
+    background-color: #556B2F;
+    color: white;
+  }
+
+  /* --- Add this animation code at the end of HomePage.css --- */
+
+/* 1. Define the animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2. Apply the animation to the elements with a delay */
+.hero-logo {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.hero-headline {
+  animation: fadeInUp 0.5s ease-out 0.2s forwards; /* 0.2s delay */
+  opacity: 0; /* Start hidden */
+}
+
+.hero-subheadline {
+  animation: fadeInUp 0.5s ease-out 0.4s forwards; /* 0.4s delay */
+  opacity: 0; /* Start hidden */
+}
+
+.hero-actions {
+  animation: fadeInUp 0.5s ease-out 0.6s forwards; /* 0.6s delay */
+  opacity: 0; /* Start hidden */
+}
